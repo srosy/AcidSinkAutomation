@@ -1,0 +1,19 @@
+This document is to assist with reformatting USB Memory Drives on linux. 
+
+	
+Reformatting the drive.
+
+	In the terminal, execute the following commands:
+	
+		1. "sudo fdisk -l" Finds the name of the USB drives.
+
+		2. "sudo umount /dev/sdb1" Unmount, sdb1 is an example USB drive name.
+
+		3. "sudo mkfs.vfat /dev/sdb1" reformat the USB to FAT.
+
+		4. "sudo mkfs.vfat -n 'name' -I /dev/sdb1" Rename the drive if desired.
+
+		To EJECT:
+		
+		1. "sudo udisks --unmount /dev/sda1".
+		2. "sudo udisks --detach /dev/sda1".

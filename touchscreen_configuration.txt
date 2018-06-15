@@ -1,0 +1,19 @@
+This document is to help configure the official Raspberry pi 7" Capactivive Touchscreen. Ensure that touchscreen
+hardware is connected correctly and that touchscreen displays at the least.
+
+	Display Rotation.
+
+		1. In the terminal, navigate to "/boot/config.txt".
+		
+		2. at the bottom of the text if line doesn't already exist, add: "display_rotate=2" or "display_rotate=3"
+		
+	Touchscreen Axis Inversion.
+		
+		1. In the terminal execute "sudo apt-get install xinput" Ensure there is proper internet connection.
+		
+		2. "xinput --set-prop 'FT5406 memory based driver' 'Coordinate Transformation Matrix. 0 -1 1 1 0 0 0 0 1"
+
+		This will change the axis of the touchscreen to fit the portrait layout display.
+		NOTE: Unless a script is written with this axis inversion and set to run at boot, everytime system is
+		      restarted, the touchscreen axis will be reset to default and will not save.
+	

@@ -1,0 +1,25 @@
+This document is to assist with the wiring of the raspberry pi for the Acid hood program to operate correctly.
+Refer to "pi3_gpio.png" for visual representation.
+
+	PIN  |    NAME    |  PIN  |     NAME    
+	-------------------------------------
+	01	 3.3VDC	      02        5VDC
+	03	 GPIO02	      04	5VDC
+	05	 GPIO03	      06	GND			
+	07	 GPIO04	      08	TX/GPIO14
+	09	  GND	      10	RX/GPIO15
+	11  INTERLOCK/GPIO17  12	GPIO18
+	13	HF/GPIO27     14	GND
+	15	 GPIO22	      16	ANUNCIATOR/GPIO23
+	17	 3.3VDC	      18	DRIPTRAYSENSOR/GPIO24
+	19	 GPIO10	      20	GND
+	21	 GPIO09	      22	OVERFILLSENSOR/GPIO25
+	23	 GPIO11	      24	PHOTOHELIC/GPIO28
+	25	  GND	      26	GPIO07
+	27	 ID_SC	      28	ID_SC
+	29    HNO3/GPIO05     30	GND
+	31     H20/GPIO06     32	DEADMANSWTICH/GPIO12
+	33    DRAIN/GPIO13    34	GND
+	35	 GPIO19	      36	D0/GPIO16
+	37  N2CURTAIN/GPIO26  38	CS/GPIO20
+	39	  GND	      40	CLK/GPIO21

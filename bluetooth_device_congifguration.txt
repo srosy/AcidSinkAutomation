@@ -1,0 +1,33 @@
+This document is to assist the the addition/removal and setup process of bluetooth devices and the raspberry pi.
+
+1. Update the RaspberryPi.
+
+	Ensure you have internet access. 
+	
+	In the terminal, type the following commands:
+		
+		1. "sudo apt-get update"
+		2. "sudo apt-get upgrade -y"
+		3. "sudo apt-get dist-upgrade -y"
+		4. "sudo rpi-update -y"
+	
+	Upon completion, reboot the pi with "sudo reboot".
+
+2. Install bluetoothctl.
+
+	Return to the terminal after boot and execute the following commands:
+
+		1. "sudo apt-0get install bluteooth bluez blueman"
+		
+	After installation is finished, enter the bluetoothctl. 
+		1. "sudo bluetoothctl"
+		2. "agent on"
+		3. "default-agent"
+		4. "scan on"
+		5. "pair XX:XX:XX:XX:XX:XX" The X's represent the address of the device you're trying to add.
+		To determine the correct address, determine from output of command scan on.
+		6. "connect XX:XX:XX:XX:XX"
+		NOTE: Sometimes you may be required to enter a sequence of numbers on a keyboard for example and press ENTER.
+		      This is usually a 6 digit password and may not display on screen when entered.	
+
+

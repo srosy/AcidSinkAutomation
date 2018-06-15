@@ -1,0 +1,17 @@
+This document is the normal upload procedure followed to successfully run the Acid Hood software.
+
+
+1. In the Main_gui.py code, at the top of the code where Global variables are declared and set, change variables:
+
+drainTime -- Long Sink: 210, Double Sink: 450.
+rinseTime -- Long Sink: 105, Double Sink: 105.
+
+2. Ensure image path is correct in code. Press CTRL+F and type image into the search box and find the only place
+and image is used in the code. Each raspberry pi uses a different foldername, so the master copy of the code will
+differ in file image path. Change the portion of the file image path to the correct folder name, otherwise program
+WILL NOT boot.
+
+3. To set program to fullscreen, press CTRL+F and type in the word zoom into the search box in the main_gui.py code.
+You will be brought to the end of the the code with a comment explaining that you can enable/disable the GUI from fullscreen
+to a traditional window by interchanging the words "zoom" and "fullscreen" in the line of code.
+

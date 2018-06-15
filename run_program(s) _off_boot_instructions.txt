@@ -1,0 +1,33 @@
+This document is provided to help successfully run scripts after the desktop has been initialized
+in the Linux kernel sequence. 
+
+Visit https://www.megaleecher.net/LXDE_AutoLaunch for reference as needed.
+
+1. Create the .sh file.
+
+	Write the script you want to run and at the top of the file for the first line of code add "#!/bin/sh -e".
+	Doing so informs Linux that this is an executable file.
+
+2. Give Permission to execute file on boot.
+
+	In the terminal type the command: "chmod +x /path/to/yourScript.sh".
+		
+
+3. Create and point to a desktop entry application.
+	
+	In the terminal navigate to the directory "/home/pi/.config/autostart".
+
+	In the terminal type the command: "-create appName.desktop".
+
+	Open and edit the file you just created and type:
+		
+		"[Desktop Entry]
+		 Type=Application
+		 Exec=/home/pi/Desktop/yourScript.sh"
+
+	Save and Exit.
+
+	
+	
+		
+	
